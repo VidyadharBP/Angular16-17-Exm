@@ -1,0 +1,47 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row m-3">
+      <!-- <div class="col-md-12"> -->
+        <h1 class="text-center"> Add User Details Here!!..</h1>
+
+        @defer (on timer(5000)) {
+          <h2 class="text-center">This is Ang-17 New Feature Defer content displaying after 5 second using Timer(5000)...</h2>
+        }
+
+        <!-- @defer (on viewport) {
+          <h2 class="text-center">This is Ang-17 New Feature Defer content displaying using viewport...</h2>
+        }
+        @placeholder {
+          <h2 class="text-center">Placeholder..........</h2>
+        } -->
+        
+        <!-- @defer (on interaction) {
+          <h2 class="text-center">This is Ang-17 New Feature Defer content displaying using interaction...</h2>
+        }
+        @placeholder {
+          <h2 class="text-center">Placeholder..........</h2>
+        } -->
+
+        <div class="container text-center">
+          <button type="button" class="btn btn-primary btn-lg" (click)="openPopup()">Click me!!</button> 
+          <!-- <div class="row" *ngIf="popupFlag">
+            <div class="col-md-8 offset-md-2">
+              <app-popup></app-popup>
+            </div>
+          </div> -->
+          <div class="row">
+            @if (popupFlag()) {
+              <div class="col-md-8 offset-md-2">
+                <app-popup></app-popup>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="row">
+          <app-user-details></app-user-details>
+        </div>
+      <!-- </div> -->
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

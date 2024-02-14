@@ -1,0 +1,33 @@
+<div class="bootstrap-wrapper">
+    <div class="container m-3">
+        <div class="card">
+            <div class="card-body mt-2">
+                <div class="row">
+                    <h4>Getting Data by using Route params mapping...</h4>
+                </div>
+                <div class="row">
+                    <h2 >Welcome {{fname}}</h2>
+                </div>
+                <div class="container"><button class="btn btn-sm btn-primary m-2" (click)="newdataCmp()">NewData Component</button><button class="btn btn-sm btn-primary m-2" (click)="distroyed()">NewData Component Distroyed</button></div>
+            </div>
+        </div>
+        
+        
+        <div class="row m-2">
+            @if (newDataFlag) {
+                <div class="col-md-10 offset-md-1">
+                    <div class="card ">
+                        <div class="card-body mt-2">
+                            <app-new-data></app-new-data>
+                        </div>
+                    </div>
+                </div>
+            } 
+            
+        </div>
+        
+    </div>
+</div>
+
+
+

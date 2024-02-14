@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <!-- <div class="card mt-4" *ngFor="let item of dataArray(); ">
+            <div class="container mt-2">
+                <div class="card-body">
+                    <div> First Name : {{item.fName}} </div>
+                    <div> Last Name : {{item.lName}}</div>
+                    <div> <button class="btn btn-sm btn-primary" (click)="navToDetails(item)"> Email: {{item.email}}</button></div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="card mt-4">
+            @for (item of dataArray(); track $index) {
+                <div class="container mt-2">
+                    <div class="card-body">
+                        <div> First Name : {{item.fName}} </div>
+                        <div> Last Name : {{item.lName}}</div>
+                        <div> <button class="btn btn-sm btn-primary" (click)="navToDetails(item)"> Email: {{item.email}}</button></div>
+                    </div>
+                </div>
+                <h5>Getting Data using Signal......</h5>
+            }
+        </div>
+    </div>
+    <!-- <router-outlet></router-outlet> -->
+</div>
